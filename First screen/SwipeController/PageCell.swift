@@ -11,8 +11,7 @@ import UIKit
 class PageCell: UICollectionViewCell {
     
      var myImageView: UIImageView = {
-     let image = UIImage(named: "trees1")
-     let imageView = UIImageView(image: image)
+     let imageView = UIImageView()
      imageView.translatesAutoresizingMaskIntoConstraints = false
      imageView.contentMode = .scaleAspectFit
      return imageView
@@ -20,16 +19,7 @@ class PageCell: UICollectionViewCell {
   
     var descriptionTextView: UITextView = {
     let textView = UITextView()
-    
-    let attributedText = NSMutableAttributedString(string: "Добро пожаловать в наше приложение",
-                                                   attributes: [NSMutableAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)])
-    
-    attributedText.append(NSAttributedString(string: "\n\n\n Вы готовы к работе с приложением?",
-                                             attributes: [NSMutableAttributedString.Key.font : UIFont.systemFont(ofSize: 13),
-                                                          NSAttributedString.Key.foregroundColor : UIColor.gray]))
-    textView.attributedText = attributedText
     textView.translatesAutoresizingMaskIntoConstraints = false
-    textView.textAlignment = .center
     textView.isEditable = false
     textView.isSelectable = false
     return textView
@@ -54,7 +44,7 @@ class PageCell: UICollectionViewCell {
      topImageContainerView.addSubview(myImageView)
      myImageView.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor).isActive = true
      myImageView.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor).isActive = true
-     myImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.5).isActive = true
+     myImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.6).isActive = true
      topImageContainerView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
      addSubview(descriptionTextView)
      descriptionTextView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor).isActive = true
