@@ -9,8 +9,8 @@
 import UIKit
 
 class PageCell: UICollectionViewCell {
-  
-  private let myImageView: UIImageView = {
+    
+     var myImageView: UIImageView = {
      let image = UIImage(named: "trees1")
      let imageView = UIImageView(image: image)
      imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -18,7 +18,7 @@ class PageCell: UICollectionViewCell {
      return imageView
    }()
   
-  private let descriptionTextView: UITextView = {
+    var descriptionTextView: UITextView = {
     let textView = UITextView()
     
     let attributedText = NSMutableAttributedString(string: "Добро пожаловать в наше приложение",
@@ -62,6 +62,22 @@ class PageCell: UICollectionViewCell {
      descriptionTextView.rightAnchor.constraint(equalTo: rightAnchor, constant: -25).isActive = true
      descriptionTextView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
    }
+  
+  func configurePage(page: Page) {
+    myImageView.image = UIImage(named: page.imageName)
+    setAttributes(text: page.headerText, bodyText: page.bodyText)
+  }
+  
+  private func setAttributes(text: String, bodyText: String) {
+    let attributedText = NSMutableAttributedString(string: text,
+                                                   attributes: [NSMutableAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 22)])
+    
+    attributedText.append(NSAttributedString(string: "\n\n\n \(bodyText)",
+                                             attributes: [NSMutableAttributedString.Key.font : UIFont.systemFont(ofSize: 17),
+                                                          NSAttributedString.Key.foregroundColor : UIColor.gray]))
+    descriptionTextView.attributedText = attributedText
+    descriptionTextView.textAlignment = .center
+  }
   
   
 }
