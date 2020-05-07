@@ -16,6 +16,8 @@
 		ED88B8C524641D4C0095EAF7 /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8C424641D4C0095EAF7 /* SwipingController.swift */; };
 		ED88B8C72464249C0095EAF7 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8C62464249C0095EAF7 /* PageCell.swift */; };
 		ED88B8C924642BFB0095EAF7 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8C824642BFA0095EAF7 /* Page.swift */; };
+		ED88B8CB2464411D0095EAF7 /* SwipingController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8CA2464411D0095EAF7 /* SwipingController+extension.swift */; };
+		ED88B8CD246441F70095EAF7 /* SwipreController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8CC246441F70095EAF7 /* SwipreController+UICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		ED88B8C424641D4C0095EAF7 /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		ED88B8C62464249C0095EAF7 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		ED88B8C824642BFA0095EAF7 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		ED88B8CA2464411D0095EAF7 /* SwipingController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+extension.swift"; sourceTree = "<group>"; };
+		ED88B8CC246441F70095EAF7 /* SwipreController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipreController+UICollectionView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				ED88B8B2246302C70095EAF7 /* SceneDelegate.swift */,
 				ED88B8B4246302C70095EAF7 /* ViewController.swift */,
 				ED88B8C424641D4C0095EAF7 /* SwipingController.swift */,
+				ED88B8CA2464411D0095EAF7 /* SwipingController+extension.swift */,
+				ED88B8CC246441F70095EAF7 /* SwipreController+UICollectionView.swift */,
 				ED88B8C62464249C0095EAF7 /* PageCell.swift */,
 				ED88B8C824642BFA0095EAF7 /* Page.swift */,
 				ED88B8B6246302C70095EAF7 /* Main.storyboard */,
@@ -147,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED88B8CD246441F70095EAF7 /* SwipreController+UICollectionView.swift in Sources */,
+				ED88B8CB2464411D0095EAF7 /* SwipingController+extension.swift in Sources */,
 				ED88B8B5246302C70095EAF7 /* ViewController.swift in Sources */,
 				ED88B8C72464249C0095EAF7 /* PageCell.swift in Sources */,
 				ED88B8C924642BFB0095EAF7 /* Page.swift in Sources */,

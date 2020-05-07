@@ -10,7 +10,7 @@ import UIKit
 
 class SwipingController: UICollectionViewController {
   
-  private let pages = [Page(imageName: "trees1",
+   let pages = [Page(imageName: "trees1",
                             headerText: "Добро пожаловать в мое учебное приложение",
                             bodyText: "Здесь ты найдешь множество интересных фактов про природу"),
                       Page(imageName: "trees2",
@@ -38,27 +38,6 @@ class SwipingController: UICollectionViewController {
   private func registerCell() {
     collectionView.register(PageCell.self, forCellWithReuseIdentifier: "cellID")
   }
-  
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return 0
-  }
-  
-  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return pages.count
-  }
-  
-  override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath) as! PageCell
-    let page = pages[indexPath.row]
-    cell.configurePage(page: page)
-    return cell
-  }
-  
-  override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-    let x = targetContentOffset.pointee.x
-    pageControl.currentPage = Int(x / view.frame.width)
-  }
-  //methods
   
   fileprivate func setupBottomControl() {
      let bottomStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextsButton])
@@ -108,7 +87,7 @@ class SwipingController: UICollectionViewController {
     collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
    }
   
-  private lazy var pageControl: UIPageControl = {
+   lazy var pageControl: UIPageControl = {
     let pc = UIPageControl()
     pc.currentPage = 0
     pc.numberOfPages = pages.count
