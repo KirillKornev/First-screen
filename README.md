@@ -1,5 +1,6 @@
 # First-screen
 horizontal scroll pages
 
-![ezgif com-video-to-gif](https://user-images.githubusercontent.com/56608476/81317944-2d6f8980-9096-11ea-8fbb-5f78c30b121d.gif)
+![ezgif com-resize](https://user-images.githubusercontent.com/56608476/81318410-e3d36e80-9096-11ea-8ca3-356da7586364.gif)
+
 
