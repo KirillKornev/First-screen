@@ -10,8 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
   
+  private let pageControl: UIPageControl = {
+    let pc = UIPageControl()
+    pc.currentPage = 0
+    pc.numberOfPages = 5
+    pc.pageIndicatorTintColor = UIColor(red: 249/255, green: 207/255, blue: 244/255, alpha: 1)
+    pc.currentPageIndicatorTintColor = .mainPink
+    return pc
+  }()
+  
   private let myImageView: UIImageView = {
-    let image = UIImage(named: "image")
+    let image = UIImage(named: "trees1")
     let imageView = UIImageView(image: image)
     imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.contentMode = .scaleAspectFit
@@ -39,6 +48,21 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     view.addSubview(descriptionTextView)
     setupLayout()
+    setupBottomControl()
+  }
+  
+  fileprivate func setupBottomControl() {
+     let bottomStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextsButton])
+    view.addSubview(bottomStackView)
+    bottomStackView.translatesAutoresizingMaskIntoConstraints = false
+    bottomStackView.distribution = .fillEqually
+    
+    NSLayoutConstraint.activate([
+      bottomStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+      bottomStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+      bottomStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+      bottomStackView.heightAnchor.constraint(equalToConstant: 50)
+    ])
   }
   
   private func setupLayout() {
@@ -59,7 +83,27 @@ class ViewController: UIViewController {
     descriptionTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
   }
   
-
+  private let previousButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle("PREV", for: .normal)
+    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+    button.setTitleColor(.gray, for: .normal)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+  
+  private let nextsButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle("NEXT", for: .normal)
+    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+    button.setTitleColor(.mainPink, for: .normal)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+  
 
 }
 
+extension UIColor {
+  static var mainPink = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
+}
