@@ -77,9 +77,8 @@
 				ED88B8B0246302C70095EAF7 /* AppDelegate.swift */,
 				ED88B8B2246302C70095EAF7 /* SceneDelegate.swift */,
 				ED88B8B4246302C70095EAF7 /* ViewController.swift */,
-				ED88B8D1246444400095EAF7 /* DataSource.swift */,
 				ED88B8D02464439D0095EAF7 /* SwipeController */,
-				ED88B8CE246442F70095EAF7 /* UIColor+extension.swift */,
+				ED88B8DB24644D9D0095EAF7 /* Support */,
 				ED88B8B6246302C70095EAF7 /* Main.storyboard */,
 				ED88B8B9246302CC0095EAF7 /* Assets.xcassets */,
 				ED88B8BB246302CC0095EAF7 /* LaunchScreen.storyboard */,
@@ -95,11 +94,20 @@
 				ED88B8CA2464411D0095EAF7 /* SwipingController+extension.swift */,
 				ED88B8CC246441F70095EAF7 /* SwipreController+UICollectionView.swift */,
 				ED88B8C62464249C0095EAF7 /* PageCell.swift */,
+			);
+			path = SwipeController;
+			sourceTree = "<group>";
+		};
+		ED88B8DB24644D9D0095EAF7 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				ED88B8D1246444400095EAF7 /* DataSource.swift */,
 				ED88B8C824642BFA0095EAF7 /* Page.swift */,
 				ED88B8D5246446AF0095EAF7 /* CustomNextButton.swift */,
 				ED88B8D72464499D0095EAF7 /* PrevButton.swift */,
+				ED88B8CE246442F70095EAF7 /* UIColor+extension.swift */,
 			);
-			path = SwipeController;
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
