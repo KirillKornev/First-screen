@@ -32,6 +32,7 @@ class SwipingController: UICollectionViewController {
     collectionView.backgroundColor = .white
     registerCell()
     collectionView.isPagingEnabled = true
+    setupBottomControl()
   }
   
   private func registerCell() {
@@ -52,6 +53,70 @@ class SwipingController: UICollectionViewController {
     cell.configurePage(page: page)
     return cell
   }
+  
+  override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    let x = targetContentOffset.pointee.x
+    pageControl.currentPage = Int(x / view.frame.width)
+  }
+  //methods
+  
+  fileprivate func setupBottomControl() {
+     let bottomStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextsButton])
+    view.addSubview(bottomStackView)
+    bottomStackView.translatesAutoresizingMaskIntoConstraints = false
+    bottomStackView.distribution = .fillEqually
+    
+    NSLayoutConstraint.activate([
+      bottomStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+      bottomStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+      bottomStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+      bottomStackView.heightAnchor.constraint(equalToConstant: 50)
+    ])
+  }
+  
+  private let previousButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle("PREV", for: .normal)
+    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+    button.setTitleColor(.gray, for: .normal)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.addTarget(self, action: #selector(handlePrevButton), for: .touchUpInside)
+    return button
+  }()
+  
+  private let nextsButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle("NEXT", for: .normal)
+    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+    button.setTitleColor(.mainPink, for: .normal)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.addTarget(self, action:  #selector(handleNextButton), for: .touchUpInside)
+    return button
+  }()
+  
+  @objc func handleNextButton() {
+    let nextIndex = min(pageControl.currentPage + 1, pages.count - 1)
+    let indexPath = IndexPath(item: nextIndex, section: 0)
+    pageControl.currentPage = nextIndex
+    collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+  }
+  
+  @objc func handlePrevButton() {
+    let nextIndex = max(pageControl.currentPage - 1, 0)
+    let indexPath = IndexPath(item: nextIndex, section: 0)
+    pageControl.currentPage = nextIndex
+    collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+   }
+  
+  private lazy var pageControl: UIPageControl = {
+    let pc = UIPageControl()
+    pc.currentPage = 0
+    pc.numberOfPages = pages.count
+    pc.pageIndicatorTintColor = UIColor(red: 249/255, green: 207/255, blue: 244/255, alpha: 1)
+    pc.currentPageIndicatorTintColor = .mainPink
+    return pc
+  }()
+  
 }
 
 extension SwipingController: UICollectionViewDelegateFlowLayout {

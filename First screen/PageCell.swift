@@ -79,7 +79,6 @@ class PageCell: UICollectionViewCell {
     descriptionTextView.textAlignment = .center
   }
   
-  
 }
 
 

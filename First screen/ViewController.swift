@@ -98,9 +98,13 @@ class ViewController: UIViewController {
     button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
     button.setTitleColor(.mainPink, for: .normal)
     button.translatesAutoresizingMaskIntoConstraints = false
+    button.addTarget(self, action: #selector(handleNextButton), for: .touchUpInside)
     return button
   }()
-  
+
+  @objc private func handleNextButton() {
+    print("trying to advance next")
+  }
 
 }
 
