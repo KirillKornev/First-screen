@@ -19,6 +19,9 @@
 		ED88B8CB2464411D0095EAF7 /* SwipingController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8CA2464411D0095EAF7 /* SwipingController+extension.swift */; };
 		ED88B8CD246441F70095EAF7 /* SwipreController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8CC246441F70095EAF7 /* SwipreController+UICollectionView.swift */; };
 		ED88B8CF246442F70095EAF7 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8CE246442F70095EAF7 /* UIColor+extension.swift */; };
+		ED88B8D2246444400095EAF7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8D1246444400095EAF7 /* DataSource.swift */; };
+		ED88B8D6246446AF0095EAF7 /* CustomNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8D5246446AF0095EAF7 /* CustomNextButton.swift */; };
+		ED88B8D82464499E0095EAF7 /* PrevButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8D72464499D0095EAF7 /* PrevButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		ED88B8CA2464411D0095EAF7 /* SwipingController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+extension.swift"; sourceTree = "<group>"; };
 		ED88B8CC246441F70095EAF7 /* SwipreController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipreController+UICollectionView.swift"; sourceTree = "<group>"; };
 		ED88B8CE246442F70095EAF7 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		ED88B8D1246444400095EAF7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		ED88B8D5246446AF0095EAF7 /* CustomNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNextButton.swift; sourceTree = "<group>"; };
+		ED88B8D72464499D0095EAF7 /* PrevButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 				ED88B8B0246302C70095EAF7 /* AppDelegate.swift */,
 				ED88B8B2246302C70095EAF7 /* SceneDelegate.swift */,
 				ED88B8B4246302C70095EAF7 /* ViewController.swift */,
+				ED88B8D1246444400095EAF7 /* DataSource.swift */,
 				ED88B8D02464439D0095EAF7 /* SwipeController */,
 				ED88B8CE246442F70095EAF7 /* UIColor+extension.swift */,
 				ED88B8B6246302C70095EAF7 /* Main.storyboard */,
@@ -89,6 +96,8 @@
 				ED88B8CC246441F70095EAF7 /* SwipreController+UICollectionView.swift */,
 				ED88B8C62464249C0095EAF7 /* PageCell.swift */,
 				ED88B8C824642BFA0095EAF7 /* Page.swift */,
+				ED88B8D5246446AF0095EAF7 /* CustomNextButton.swift */,
+				ED88B8D72464499D0095EAF7 /* PrevButton.swift */,
 			);
 			path = SwipeController;
 			sourceTree = "<group>";
@@ -164,14 +173,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED88B8D82464499E0095EAF7 /* PrevButton.swift in Sources */,
 				ED88B8CD246441F70095EAF7 /* SwipreController+UICollectionView.swift in Sources */,
 				ED88B8CB2464411D0095EAF7 /* SwipingController+extension.swift in Sources */,
 				ED88B8B5246302C70095EAF7 /* ViewController.swift in Sources */,
+				ED88B8D6246446AF0095EAF7 /* CustomNextButton.swift in Sources */,
 				ED88B8CF246442F70095EAF7 /* UIColor+extension.swift in Sources */,
 				ED88B8C72464249C0095EAF7 /* PageCell.swift in Sources */,
 				ED88B8C924642BFB0095EAF7 /* Page.swift in Sources */,
 				ED88B8B1246302C70095EAF7 /* AppDelegate.swift in Sources */,
 				ED88B8B3246302C70095EAF7 /* SceneDelegate.swift in Sources */,
+				ED88B8D2246444400095EAF7 /* DataSource.swift in Sources */,
 				ED88B8C524641D4C0095EAF7 /* SwipingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

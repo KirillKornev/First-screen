@@ -15,12 +15,12 @@ extension SwipingController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return pages.count
+    return source.pages.count
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath) as! PageCell
-    let page = pages[indexPath.row]
+    let page = source.pages[indexPath.row]
     cell.configurePage(page: page)
     return cell
   }
