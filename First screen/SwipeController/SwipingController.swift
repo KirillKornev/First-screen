@@ -30,7 +30,7 @@ class SwipingController: UICollectionViewController {
   }
   
   private func registerCell() {
-    collectionView.register(PageCell.self, forCellWithReuseIdentifier: "cellID")
+    collectionView.register(PageCell.self, forCellWithReuseIdentifier: String(describing: PageCell.self))
   }
   
   fileprivate func setupBottomControl() {

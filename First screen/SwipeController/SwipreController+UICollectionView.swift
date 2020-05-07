@@ -19,7 +19,7 @@ extension SwipingController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath) as! PageCell
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PageCell.self), for: indexPath) as! PageCell
     let page = source.pages[indexPath.row]
     cell.configurePage(page: page)
     return cell

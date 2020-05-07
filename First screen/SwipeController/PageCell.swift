@@ -9,7 +9,7 @@
 import UIKit
 
 class PageCell: UICollectionViewCell {
-    
+      
      var myImageView: UIImageView = {
      let imageView = UIImageView()
      imageView.translatesAutoresizingMaskIntoConstraints = false
