@@ -13,6 +13,8 @@
 		ED88B8B8246302C70095EAF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED88B8B6246302C70095EAF7 /* Main.storyboard */; };
 		ED88B8BA246302CC0095EAF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED88B8B9246302CC0095EAF7 /* Assets.xcassets */; };
 		ED88B8BD246302CC0095EAF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED88B8BB246302CC0095EAF7 /* LaunchScreen.storyboard */; };
+		ED88B8C524641D4C0095EAF7 /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8C424641D4C0095EAF7 /* SwipingController.swift */; };
+		ED88B8C72464249C0095EAF7 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88B8C62464249C0095EAF7 /* PageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		ED88B8B9246302CC0095EAF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED88B8BC246302CC0095EAF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED88B8BE246302CC0095EAF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED88B8C424641D4C0095EAF7 /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
+		ED88B8C62464249C0095EAF7 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				ED88B8B0246302C70095EAF7 /* AppDelegate.swift */,
 				ED88B8B2246302C70095EAF7 /* SceneDelegate.swift */,
 				ED88B8B4246302C70095EAF7 /* ViewController.swift */,
+				ED88B8C424641D4C0095EAF7 /* SwipingController.swift */,
+				ED88B8C62464249C0095EAF7 /* PageCell.swift */,
 				ED88B8B6246302C70095EAF7 /* Main.storyboard */,
 				ED88B8B9246302CC0095EAF7 /* Assets.xcassets */,
 				ED88B8BB246302CC0095EAF7 /* LaunchScreen.storyboard */,
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED88B8B5246302C70095EAF7 /* ViewController.swift in Sources */,
+				ED88B8C72464249C0095EAF7 /* PageCell.swift in Sources */,
 				ED88B8B1246302C70095EAF7 /* AppDelegate.swift in Sources */,
 				ED88B8B3246302C70095EAF7 /* SceneDelegate.swift in Sources */,
+				ED88B8C524641D4C0095EAF7 /* SwipingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
